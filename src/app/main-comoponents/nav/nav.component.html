@@ -1,0 +1,9 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+  <li ngbNavItem>
+    <button routerLink="" ngbNavLink>sign-up</button>
+  </li>
+  <li ngbNavItem>
+    <button routerLink="/log-in" ngbNavLink>log-in</button>
+  </li>
+</ul>
+<div [ngbNavOutlet]="nav"></div>

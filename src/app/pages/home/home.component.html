@@ -1,0 +1,78 @@
+<form [formGroup]="form" class="">
+  <div class="mb-3 d-flex flex-column justify-content-between">
+    <!-- ---------------------------NOME-------------------------------- -->
+    <label for="nome" class="form-label">nome</label>
+    <input id="nome" type="text" class="form-control" formControlName="nome" />
+    @if(!potara('nome')) {
+    <p>campo non valido</p>
+    }
+    <!-- ----------------------------COGNOME---------------------------- -->
+    <label for="cognome" class="form-label">cognome</label>
+    <input
+      id="congome"
+      type="text"
+      class="form-control"
+      formControlName="cognome"
+    />
+    @if(!potara('cognome')) {
+    <p>campo non valido</p>
+    }
+
+    <!-- ----------------------------PASWORD---------------------------- -->
+    <label for="psw" class="form-label">password</label>
+    <input
+      id="psw"
+      type="password"
+      class="form-control"
+      formControlName="psw"
+    />
+    @if(!potara('psw')) {
+    <p>campo non valido</p>
+    }
+
+    <!-- -----------------------CONFERMA PASWORD---------------------------- -->
+    <label for="c-psw" class="form-label">conferma password</label>
+    <input
+      id="c-psw"
+      type="password"
+      class="form-control"
+      formControlName="cpsw"
+    />
+    @if(!potara('cpsw')) {
+    <p>campo non valido</p>
+    }
+
+    <!-- -----------------------GENERE---------------------------------- -->
+    <label for="genere" class="form-label">genere</label>
+    <select id="genere" formControlName="genere">
+      <option value="0">Male</option>
+      <option value="01">Female</option>
+      <option value="02">I prefer do not select</option>
+    </select>
+    @if(!potara('genere')) {
+    <p>campo non valido</p>
+    }
+
+    <!-- ---------------------IMMAGINE PROFILE-------------------------- -->
+    <label class="form-label" for="img">immagine profilo</label>
+    <input type="file" formControlName="img" />
+    @if(!potara('img')) {
+    <p>campo non valido</p>
+    }
+
+    <!-- -----------------------BIOGRAFIA---------------------------- -->
+    <label for="biografia" class="form-label">biografia</label>
+    <textarea id="biografia" formControlName="biografia"></textarea>
+    @if(!potara('biografia')) {
+    <p>campo non valido</p>
+    }
+
+    <!-- -----------------------USERNAME---------------------------- -->
+    <label for="username" class="form-label">username</label>
+    <input type="text" id="username" formControlName="username" />
+    @if(!potara('username')) {
+    <p>campo non valido</p>
+    }
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

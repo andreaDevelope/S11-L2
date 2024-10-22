@@ -1,0 +1,31 @@
+<form (ngSubmit)="submit(form)" #form="ngForm" class="">
+  <div class="mb-3 d-flex flex-column justify-content-between">
+    <!-- ---------------------------USERNAME-------------------------------- -->
+    <label for="username" class="form-label">username</label>
+    <input
+      id="username"
+      type="text"
+      class="form-control"
+      name="username"
+      ngModel
+      #username="ngModel"
+      required
+    />
+    @if (username.invalid && username.touched) {
+    <p>campo non valido</p>
+    }
+
+    <!-- ----------------------------PASSWORD---------------------------- -->
+    <label for="psw" class="form-label">password</label>
+    <input
+      id="psw"
+      type="text"
+      class="form-control"
+      name="psw"
+      ngModel
+      #psw="ngModel"
+      required
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
