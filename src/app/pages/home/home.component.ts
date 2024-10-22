@@ -34,7 +34,7 @@ export class HomeComponent {
   }
 
   potara(input: string) {
-    console.log(this.form.controls[0].value); //non ho fatto in tempo lo devo ciclare e crearmi i controlli personalizzati
+    // console.log(this.form.controls[0].value); //non ho fatto in tempo lo devo ciclare e crearmi i controlli personalizzati
     return !this.isValid(input) && !this.isTouched(input);
   }
 }
